@@ -33,7 +33,7 @@ async function pushRandomCatName(repoOwner, token) {
         //Get all files from the repo
         const branchFilesData = await octokit.rest.repos.getContent({
             owner: repoOwner,
-            repo: 'randomCatFacts',
+            repo: 'randomFatCatz',
             branch: 'main',
         });
 
