@@ -14,7 +14,7 @@ def generate_unique_name():
 def push_random_cat_name(repo_owner, token):
     try:
         # Get all files from the repo
-        branch_files_data = requests.get(f"https://api.github.com/repos/{repo_owner}/randomCatFacts/contents/",
+        branch_files_data = requests.get(f"https://api.github.com/repos/{repo_owner}/randomFatCatz/contents/",
                                          headers={'Authorization': f'token {token}'})
         branch_files_data.raise_for_status()
         
@@ -39,7 +39,7 @@ def push_random_cat_name(repo_owner, token):
             "content": file_content,
             "branch": "main"
         }
-        response = requests.put(f"https://api.github.com/repos/{repo_owner}/randomCatFacts/contents/{random_name}",
+        response = requests.put(f"https://api.github.com/repos/{repo_owner}/randomFatCatz/contents/{random_name}",
                                 headers={'Authorization': f'token {token}'},
                                 json=file_push_data)
         response.raise_for_status()
