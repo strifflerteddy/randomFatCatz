@@ -59,15 +59,15 @@ async function pushRandomCatName(repoOwner, token) {
         // Push file to the repo
         await octokit.rest.repos.createOrUpdateFileContents({
             owner: repoOwner,
-            repo: 'randomCatFacts',
+            repo: 'randomFatCatz',
             path: randomName,
             message: 'Another great day with great cat fact',
             content: Buffer.from(fact).toString('base64'),
             branch: 'main',
         });
-        console.log('Pushed fact to randomCatFacts');
+        console.log('Pushed fact to randomFatCatz');
     } catch (error) {
-        console.error('Error pushing fact to randomCatFacts', error);
+        console.error('Error pushing fact to randomFatCatz', error);
     }
 }
 
